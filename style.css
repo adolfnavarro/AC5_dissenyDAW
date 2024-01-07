@@ -1,85 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  color: white;
-}
-body #header {
-  background-image: url("/Fotos Simracing/road.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-body #header .nav-brand {
-  font-family: "DM Sans", sans-serif;
-  font-weight: bold;
-  align-self: center;
-  font-size: 32px;
-  color: white;
-}
-body #header h1, body #header h2 {
-  color: white;
-  text-decoration: none;
-}
-body #header h2 {
-  font-size: 16px;
-}
-body #header .nav-link {
-  font-size: 18px;
-  margin: 12px;
-  color: white;
-  text-decoration: none;
-}
-body #header .nav-link:hover {
-  color: white;
-}
-body #header .search-box {
-  display: inline;
-  border-right: 1px solid white;
-  padding-right: 12px;
-  margin-right: 10px;
-  color: white;
-  font-size: 14px;
-}
-body #header .toggle-button {
-  font-size: 21px;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 0;
-  margin: 8px 10px;
-  display: none;
-}
-body #header .toggle-button:focus {
-  outline: none;
-}
-body #navbar-below {
-  background-color: blue;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-}
-body #navbar-below a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  margin: 0 10px;
-}
-body #navbar-below a:hover {
-  color: white;
-}
-
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -163,7 +82,7 @@ body #navbar-below a:hover {
 }
 
 #site-main .blue-container {
-  background-color: blue;
+  background-color: #16054d;
   padding: 20px;
   color: white;
 }
@@ -171,60 +90,213 @@ body #navbar-below a:hover {
   font-size: 24px;
   margin-bottom: 10px;
 }
-#site-main .last-entry-container {
-  background-color: blue;
-  padding: 20px;
-  color: white;
-}
-#site-main .last-entry-container h2 {
+#site-main h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-#site-main .slider .swiper-slide {
+
+.slider .swiper-slide {
   position: relative;
   overflow: hidden;
 }
-#site-main .slider .swiper-slide img {
+.slider .swiper-slide img {
   width: 70%;
   float: left;
 }
-#site-main .slider .swiper-slide .overlay-content {
+.slider .swiper-slide .overlay-content {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 20px;
   box-sizing: border-box;
 }
-#site-main .slider .swiper-slide .overlay-content h1 {
+.slider .swiper-slide .overlay-content h1 {
   font-size: 28px;
   margin-bottom: 10px;
   color: white;
 }
-#site-main .slider .swiper-slide .overlay-content .date,
-#site-main .slider .swiper-slide .overlay-content .author {
+.slider .swiper-slide .overlay-content .date,
+.slider .swiper-slide .overlay-content .author {
   color: white;
 }
-#site-main .images-container {
+
+.images-container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-#site-main .images-container .small-image {
+.images-container .small-image {
   width: 23%;
   position: relative;
 }
-#site-main .images-container .small-image img {
+.images-container .small-image img {
   width: 100%;
 }
-#site-main .images-container .small-image .overlay-content {
+.images-container .small-image .overlay-content {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 10px;
   box-sizing: border-box;
 }
-#site-main .images-container .small-image .overlay-content p {
+.images-container .small-image .overlay-content p {
   font-size: 14px;
   margin-bottom: 5px;
   color: white;
+}
+.images-container .small-image .news-aside {
+  flex: 0 0 30%; /* Ajusta el ancho según tus necesidades */
+  background-color: #f0f0f0; /* Color de fondo opcional */
+  padding: 20px; /* Ajusta el espaciado según tus necesidades */
+}
+.images-container .small-image .news-aside h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.images-container .small-image .news-aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.images-container .small-image .news-aside ul li {
+  margin-bottom: 20px;
+}
+.images-container .small-image .news-aside ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+.images-container .small-image .news-aside ul li a img {
+  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  margin-right: 10px;
+}
+.images-container .small-image .news-aside ul li a .news-details {
+  /* ... Agrega estilos según tus necesidades ... */
+}
+.images-container .small-image .news-aside ul li a .news-details p {
+  margin: 0;
+}
+.images-container .small-image .news-aside ul li a .news-details .date {
+  color: #999;
+}
+.images-container .news-aside {
+  flex: 0 0 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+.images-container .news-aside h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.images-container .news-aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.images-container .news-aside ul li {
+  margin-bottom: 20px;
+}
+.images-container .news-aside ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+.images-container .news-aside ul li a img {
+  width: 50px;
+  margin-right: 10px;
+}
+.images-container .news-aside ul li a .news-details p {
+  margin: 0;
+}
+.images-container .news-aside ul li a .news-details .date {
+  color: #999;
+}
+
+#footer {
+  background-color: #16054d;
+  color: white;
+  padding: 30px 0;
+}
+#footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#footer .container .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+#footer .container .row .col-3 {
+  width: 30%;
+  margin-bottom: 20px;
+}
+#footer .container .row .col-3 h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+#footer .container .row .col-3 .text-secondary {
+  color: #BDC3C7;
+}
+#footer .container .row .col-3 p {
+  margin: 10px 0;
+}
+#footer .container .row .col-3 address,
+#footer .container .row .col-3 .phone,
+#footer .container .row .col-3 .email {
+  margin-bottom: 10px;
+}
+#footer .container .row .col-3 address i,
+#footer .container .row .col-3 .phone i,
+#footer .container .row .col-3 .email i {
+  margin-right: 10px;
+}
+#footer .container .row .tags {
+  width: 40%;
+}
+#footer .container .row .tags a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #16054d;
+  color: white;
+}
+#footer .container .row .tags a:hover {
+  background-color: #3498DB;
+}
+#footer .container .row .social {
+  width: 30%;
+}
+#footer .container .row .social a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #3498DB;
+  color: white;
+}
+#footer .container .row .social a i {
+  margin-right: 5px;
+}
+#footer .container .row .social a:hover {
+  background-color: #3498DB;
+}
+#footer .copyrights {
+  text-align: center;
+}
+#footer .copyrights .text-center {
+  font-size: 18px;
+}
+#footer .copyrights .text-center a {
+  color: #3498DB;
+}
+#footer .copyrights .text-center a:hover {
+  text-decoration: underline;
+}
+#footer #simracer-logo {
+  width: 80px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=style.css.map */

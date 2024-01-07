@@ -1,20 +1,36 @@
 
+$azulOscuro:#212f5c;
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
-
-  #header {
+  display:flex;
+  flex-direction: column;
+  
+}
+  header {
     background-image: url('Fotos Simracing/road.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    position: relative;
+    background-size:cover;
+    background-position:center;
+    padding: 2%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: 25vh;
+
+    div {
+      height: 80%;
+      img 
+      {
+        height:70%;
+      }
+      h1,h2 
+      {
+        height:15%;
+      }
+    }
 
     .nav-brand {
       font-family: 'DM Sans', sans-serif;
@@ -33,68 +49,40 @@ body {
       font-size: 16px; 
     }
 
-    .nav-link {
-      font-size: 18px;
-      margin: 12px;
-      color: white;
-      text-decoration: none;
-      &:hover {
-        color: white;
-      }
-    }
 
-    .search-box {
-      display: inline;
-      border-right: 1px solid white;
-      padding-right: 12px;
-      margin-right: 10px;
-      color: white; 
-      font-size: 14px; 
-    }
 
-    .toggle-button {
-      font-size: 21px;
-      background-color: transparent;
-      border: none;
-      position: absolute;
-      right: 0;
-      margin: 8px 10px;
-      display: none;
 
-      &:focus {
-        outline: none;
-      }
-    }
+
   }
 
-  #navbar-below {
-    background-color: blue;
-    padding: 10px;
+
+nav {
+  height:7vh;
+  background-color: $azulOscuro;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  padding-left: 3%;
+  div {
     display: flex;
-    justify-content: space-around;
-    color: white;
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-
-    a {
+    flex-direction: row;
+    align-items: center;
+    gap:2vw;
+    a 
+    {
+      color:white;
       text-decoration: none;
-      color: white;
-      font-size: 18px;
-      margin: 0 10px;
-
+      font-weight:bold;
+      font-size: large;
       &:hover {
-        color: white; 
+        color: rgb(201, 201, 201); 
       }
     }
   }
 }
-
 #site-main {
   .blue-container {
-    background-color: #16054d;
+    background-color: #3498DB;
     padding: 20px;
     color: white;
 
@@ -259,7 +247,7 @@ body {
     
   
   #footer {
-    background-color: #16054d; 
+    background-color: $azulOscuro; 
     color: white;
     padding: 30px 0;
   
@@ -309,7 +297,7 @@ body {
           a {
             margin-right: 10px;
             margin-bottom: 10px;
-            background-color: #16054d; 
+            background-color: $azulOscuro; 
             color: white;
             &:hover {
               background-color: #3498DB; 

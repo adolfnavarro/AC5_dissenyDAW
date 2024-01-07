@@ -4,8 +4,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: white;
 }
-
-#header {
+body #header {
   background-image: url("/Fotos Simracing/road.jpg");
   background-size: cover;
   background-position: center;
@@ -16,41 +15,38 @@ body {
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.5);
 }
-#header .nav-brand {
+body #header .nav-brand {
   font-family: "DM Sans", sans-serif;
   font-weight: bold;
   align-self: center;
   font-size: 32px;
   color: white;
 }
-#header h1, #header h2 {
+body #header h1, body #header h2 {
   color: white;
   text-decoration: none;
 }
-#header h2 {
+body #header h2 {
   font-size: 16px;
 }
-#header .collapse {
-  align-self: center;
-}
-#header .nav-link {
+body #header .nav-link {
   font-size: 18px;
   margin: 12px;
   color: white;
   text-decoration: none;
 }
-#header .nav-link:hover {
-  color: var(--primary-color);
+body #header .nav-link:hover {
+  color: white;
 }
-#header .search-box {
+body #header .search-box {
   display: inline;
-  border-right: 1px solid var(--secondary);
+  border-right: 1px solid white;
   padding-right: 12px;
   margin-right: 10px;
   color: white;
   font-size: 14px;
 }
-#header .toggle-button {
+body #header .toggle-button {
   font-size: 21px;
   background-color: transparent;
   border: none;
@@ -59,6 +55,70 @@ body {
   margin: 8px 10px;
   display: none;
 }
-#header .toggle-button:focus {
+body #header .toggle-button:focus {
   outline: none;
+}
+body #navbar-below {
+  background-color: blue;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+}
+body #navbar-below a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 10px;
+}
+body #navbar-below a:hover {
+  color: white;
+}
+
+#site-main .blue-container {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+}
+#site-main .blue-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#site-main #site-main .last-entry-container {
+  background-color: blue;
+  padding: 20px;
+  color: white;
+}
+#site-main #site-main .last-entry-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#site-main .slider .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+#site-main .slider .swiper-slide img {
+  width: 70%;
+  float: left;
+}
+#site-main .slider .swiper-slide .overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#site-main .slider .swiper-slide .overlay-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: white;
+}
+#site-main .slider .swiper-slide .overlay-content .date, #site-main .slider .swiper-slide .overlay-content .author {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

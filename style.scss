@@ -91,6 +91,99 @@ body {
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
+  #header {
+    background-image: url('/Fotos Simracing/road.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .nav-brand {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: bold;
+      align-self: center;
+      font-size: 32px;
+      color: white;
+    }
+
+    h1, h2 {
+      color: white;
+      text-decoration: none; 
+    }
+
+    h2 {
+      font-size: 16px; 
+    }
+
+    .nav-link {
+      font-size: 18px;
+      margin: 12px;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+
+    .search-box {
+      display: inline;
+      border-right: 1px solid white;
+      padding-right: 12px;
+      margin-right: 10px;
+      color: white; 
+      font-size: 14px; 
+    }
+
+    .toggle-button {
+      font-size: 21px;
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      right: 0;
+      margin: 8px 10px;
+      display: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  #navbar-below {
+    background-color: blue;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      margin: 0 10px;
+
+      &:hover {
+        color: white; 
+      }
+    }
+  }
+}
+
 #site-main {
   .blue-container {
     background-color: blue;
@@ -102,46 +195,72 @@ body {
       margin-bottom: 10px;
     }
   }
-  #site-main {
-    .last-entry-container {
-      background-color: blue;
-      padding: 20px;
-      color: white;
-  
-      h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-    }
 
+  .last-entry-container {
+    background-color: blue;
+    padding: 20px;
+    color: white;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
   }
 
-}
-#site-main {
   .slider {
     .swiper-slide {
       position: relative;
-      overflow: hidden; 
+      overflow: hidden;
 
       img {
-        width: 70%; 
-        float: left; 
+        width: 70%;
+        float: left;
       }
 
       .overlay-content {
         position: absolute;
-        bottom: 0; 
-        left: 0; 
-        padding: 20px; 
-        box-sizing: border-box; 
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
 
         h1 {
-          font-size: 28px; 
+          font-size: 28px;
           margin-bottom: 10px;
-          color: white; 
+          color: white;
         }
 
-        .date, .author {
+        .date,
+        .author {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .images-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .small-image {
+      width: 23%; 
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .overlay-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        box-sizing: border-box;
+
+        p {
+          font-size: 14px; 
+          margin-bottom: 5px;
           color: white;
         }
       }

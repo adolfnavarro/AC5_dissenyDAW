@@ -48,11 +48,6 @@ body {
     h2 {
       font-size: 16px; 
     }
-
-
-
-
-
   }
 
 
@@ -80,172 +75,113 @@ nav {
     }
   }
 }
+
 #site-main {
-  .blue-container {
-    background-color: #3498DB;
-    padding: 20px;
-    color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
+.blue-container {
+  flex: 0 0 100%;
+  background-color: #3498DB;
+  padding: 20px;
+  color: white;
+}
+
+.slider {
+  .swiper-slide {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 140vh;
+      height: 65vh;
+      float: left;
+    }
+    
+    .overlay-content h1, p{
+      color: white;
     }
   }
+}
 
-    h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+.swiper-slide img {
+  width: 100%; 
+}
+
+.news-aside {
+  flex: 0 0 30%;
+  background-color: #f0f0f0;
+  padding: 20px;
+
+  h2 {
+    font-size: 18px; 
+    color: black;
   }
 
-  .slider {
-    .swiper-slide {
-      position: relative;
-      overflow: hidden;
-
-      img {
-        width: 70%;
-        float: left;
-      }
-
-      .overlay-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 20px;
-        box-sizing: border-box;
-
-        h1 {
-          font-size: 28px;
-          margin-bottom: 10px;
-          color: white;
-        }
-
-        .date,
-        .author {
-          color: white;
-        }
-      }
-    }
-  }
-
-  .images-container {
-    display: flex;
-    justify-content: space-between;
+  ul {
     margin-top: 20px;
-
-    .small-image {
-      width: 23%; 
-      position: relative;
-
-      img {
-        width: 100%;
-      }
-
-      .overlay-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 10px;
-        box-sizing: border-box;
-
-        p {
-          font-size: 14px; 
-          margin-bottom: 5px;
-          color: white;
-        }
-      }
-      .news-aside {
-        flex: 0 0 30%; /* Ajusta el ancho según tus necesidades */
-        background-color: #f0f0f0; /* Color de fondo opcional */
-        padding: 20px; /* Ajusta el espaciado según tus necesidades */
-    
-        h2 {
-          font-size: 24px;
-          margin-bottom: 10px;
-        }
-    
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-    
-          li {
-            margin-bottom: 20px;
-    
-            a {
-              display: flex;
-              align-items: center;
-              text-decoration: none;
-              color: #333;
-    
-              img {
-                width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
-                margin-right: 10px;
-              }
-    
-              .news-details {
-                /* ... Agrega estilos según tus necesidades ... */
-    
-                p {
-                  margin: 0;
-                }
-    
-                .date {
-                  color: #999;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    .news-aside {
-      flex: 0 0 30%;
-      background-color: #f0f0f0;
-      padding: 20px;
-  
-      h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-  
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-  
-        li {
-          margin-bottom: 20px;
-  
-          a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #333;
-  
-            img {
-              width: 50px;
-              margin-right: 10px;
-            }
-  
-            .news-details {
-              p {
-                margin: 0;
-              }
-  
-              .date {
-                color: #999;
-              }
-            }
-          }
-        }
-      }
-    }
   }
-    
-    
-  
+
+  li {
+    margin-bottom: 20px; 
+  }
+}
+
+.news-aside img {
+  width: 40%;
+  padding: 10px; 
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.news-details {
+  p {
+    margin: 0;
+    font-size: 20px; 
+  }
+
+  .date {
+    color: #999;
+  }
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.small-image {
+  width: 23%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
   #footer {
     background-color: $azulOscuro; 
     color: white;

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -66,18 +65,16 @@ nav div a:hover {
   color: rgb(201, 201, 201);
 }
 
-#site-main .blue-container {
+#site-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blue-container {
+  flex: 0 0 100%;
   background-color: #3498DB;
   padding: 20px;
   color: white;
-}
-#site-main .blue-container h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-#site-main h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
 }
 
 .slider .swiper-slide {
@@ -85,24 +82,62 @@ nav div a:hover {
   overflow: hidden;
 }
 .slider .swiper-slide img {
-  width: 70%;
+  width: 140vh;
+  height: 65vh;
   float: left;
 }
-.slider .swiper-slide .overlay-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.slider .swiper-slide .overlay-content h1, .slider .swiper-slide p {
+  color: white;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.news-aside {
+  flex: 0 0 30%;
+  background-color: #f0f0f0;
   padding: 20px;
-  box-sizing: border-box;
 }
-.slider .swiper-slide .overlay-content h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: white;
+.news-aside h2 {
+  font-size: 18px;
+  color: black;
 }
-.slider .swiper-slide .overlay-content .date,
-.slider .swiper-slide .overlay-content .author {
-  color: white;
+.news-aside ul {
+  margin-top: 20px;
+}
+.news-aside li {
+  margin-bottom: 20px;
+}
+
+.news-aside img {
+  width: 40%;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.news-details p {
+  margin: 0;
+  font-size: 20px;
+}
+.news-details .date {
+  color: #999;
 }
 
 .images-container {
@@ -110,93 +145,19 @@ nav div a:hover {
   justify-content: space-between;
   margin-top: 20px;
 }
-.images-container .small-image {
+
+.small-image {
   width: 23%;
   position: relative;
+  margin-bottom: 20px;
 }
-.images-container .small-image img {
-  width: 100%;
-}
-.images-container .small-image .overlay-content {
+
+.overlay-content {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 10px;
   box-sizing: border-box;
-}
-.images-container .small-image .overlay-content p {
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: white;
-}
-.images-container .small-image .news-aside {
-  flex: 0 0 30%; /* Ajusta el ancho según tus necesidades */
-  background-color: #f0f0f0; /* Color de fondo opcional */
-  padding: 20px; /* Ajusta el espaciado según tus necesidades */
-}
-.images-container .small-image .news-aside h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.images-container .small-image .news-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.images-container .small-image .news-aside ul li {
-  margin-bottom: 20px;
-}
-.images-container .small-image .news-aside ul li a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-}
-.images-container .small-image .news-aside ul li a img {
-  width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
-  margin-right: 10px;
-}
-.images-container .small-image .news-aside ul li a .news-details {
-  /* ... Agrega estilos según tus necesidades ... */
-}
-.images-container .small-image .news-aside ul li a .news-details p {
-  margin: 0;
-}
-.images-container .small-image .news-aside ul li a .news-details .date {
-  color: #999;
-}
-.images-container .news-aside {
-  flex: 0 0 30%;
-  background-color: #f0f0f0;
-  padding: 20px;
-}
-.images-container .news-aside h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.images-container .news-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.images-container .news-aside ul li {
-  margin-bottom: 20px;
-}
-.images-container .news-aside ul li a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-}
-.images-container .news-aside ul li a img {
-  width: 50px;
-  margin-right: 10px;
-}
-.images-container .news-aside ul li a .news-details p {
-  margin: 0;
-}
-.images-container .news-aside ul li a .news-details .date {
-  color: #999;
 }
 
 #footer {

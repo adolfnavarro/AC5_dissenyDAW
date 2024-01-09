@@ -25,6 +25,7 @@ header div img {
 }
 header div h1, header div h2 {
   height: 15%;
+  box-sizing: border-box;
 }
 header .nav-brand {
   font-family: "DM Sans", sans-serif;
@@ -75,6 +76,7 @@ nav div a:hover {
   background-color: #3498DB;
   padding: 20px;
   color: white;
+  box-sizing: border-box;
 }
 
 .slider .swiper-slide {
@@ -110,11 +112,6 @@ nav div a:hover {
   margin-bottom: 20px;
 }
 
-.news-aside img {
-  width: 40%;
-  padding: 10px;
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -130,6 +127,45 @@ a {
 
 img {
   max-width: 100%;
+}
+
+.news-aside img {
+  max-width: 43%;
+  margin-right: 10px;
+}
+
+.news-aside nav {
+  background-color: white;
+  overflow: hidden;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+}
+
+.news-aside nav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  width: 33.33%;
+  border-left: 1px solid black;
+  box-sizing: border-box;
+}
+
+.news-aside nav a:first-child {
+  border-left: none;
+}
+
+.news-aside nav a:hover {
+  background-color: #ddd;
+}
+
+.news-aside img.nav-icon {
+  max-width: 25px;
+  margin-right: 10px;
 }
 
 .news-details p {
@@ -223,9 +259,6 @@ img {
 }
 #footer .container .row .social a i {
   margin-right: 5px;
-}
-#footer .container .row .social a:hover {
-  background-color: #3498DB;
 }
 #footer .copyrights {
   text-align: center;

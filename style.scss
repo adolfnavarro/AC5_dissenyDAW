@@ -1,14 +1,14 @@
 
 $azulOscuro:#212f5c;
+$azulClaro: #3498DB;
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  
 }
   header {
     background-image: url('Fotos Simracing/road.jpg');
@@ -29,6 +29,8 @@ body {
       h1,h2 
       {
         height:15%;
+        box-sizing: border-box; 
+
       }
     }
 
@@ -83,9 +85,11 @@ nav {
 
 .blue-container {
   flex: 0 0 100%;
-  background-color: #3498DB;
+  background-color: $azulClaro;
   padding: 20px;
   color: white;
+  box-sizing: border-box; 
+
 }
 
 .slider {
@@ -114,6 +118,7 @@ nav {
   background-color: #f0f0f0;
   padding: 20px;
 
+
   h2 {
     font-size: 18px; 
     color: black;
@@ -126,11 +131,6 @@ nav {
   li {
     margin-bottom: 20px; 
   }
-}
-
-.news-aside img {
-  width: 40%;
-  padding: 10px; 
 }
 
 ul {
@@ -149,6 +149,46 @@ a {
 img {
   max-width: 100%;
 }
+.news-aside img{
+  max-width: 43%;
+  margin-right: 10px;
+
+}
+.news-aside nav {
+  background-color: white;
+  overflow: hidden;
+  border-right: 1px solid black; 
+  box-sizing: border-box; 
+
+}
+
+.news-aside nav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold; 
+  width: 33.33%; 
+  border-left: 1px solid black;
+  box-sizing: border-box; 
+}
+
+.news-aside nav a:first-child {
+  border-left: none; 
+}
+
+.news-aside nav a:hover {
+  background-color: #ddd;
+}
+
+.news-aside img.nav-icon {
+  max-width: 25px; 
+  margin-right: 10px;
+}
+
 
 .news-details {
   p {
@@ -207,8 +247,6 @@ img {
             margin-bottom: 15px;
           }
   
-    
-  
           .text-secondary {
             color: #BDC3C7; 
           }
@@ -216,7 +254,6 @@ img {
           p {
             margin: 10px 0;
           }
-  
           address,
           .phone,
           .email {
@@ -236,7 +273,7 @@ img {
             background-color: $azulOscuro; 
             color: white;
             &:hover {
-              background-color: #3498DB; 
+              background-color: $azulClaro; 
             }
           }
         }
@@ -247,13 +284,10 @@ img {
           a {
             margin-right: 10px;
             margin-bottom: 10px;
-            background-color: #3498DB; 
+            background-color: $azulClaro; 
             color: white;
             i {
               margin-right: 5px;
-            }
-            &:hover {
-              background-color: #3498DB; 
             }
           }
         }
@@ -265,7 +299,7 @@ img {
       .text-center {
         font-size: 18px;
         a {
-          color: #3498DB; 
+          color: $azulClaro; 
           &:hover {
             text-decoration: underline;
           }

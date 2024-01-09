@@ -194,6 +194,7 @@ img {
   left: 0;
   padding: 10px;
   box-sizing: border-box;
+  color: white;
 }
 
 #footer {
@@ -212,32 +213,37 @@ img {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-#footer .container .row .col-3 {
+#footer .container .row .col-4 {
   width: 30%;
   margin-bottom: 20px;
+  text-align: center;
 }
-#footer .container .row .col-3 h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
+#footer .container .row .col-4 .footer-title {
+  color: white;
+  border-bottom: 5px solid #3498DB;
+  padding-bottom: 5px;
 }
-#footer .container .row .col-3 .text-secondary {
+#footer .container .row .col-4 .text-secondary {
   color: #BDC3C7;
 }
-#footer .container .row .col-3 p {
+#footer .container .row .col-4 p {
   margin: 10px 0;
+  color: white;
 }
-#footer .container .row .col-3 address,
-#footer .container .row .col-3 .phone,
-#footer .container .row .col-3 .email {
+#footer .container .row .col-4 address,
+#footer .container .row .col-4 .phone,
+#footer .container .row .col-4 .email {
   margin-bottom: 10px;
 }
-#footer .container .row .col-3 address i,
-#footer .container .row .col-3 .phone i,
-#footer .container .row .col-3 .email i {
+#footer .container .row .col-4 address i,
+#footer .container .row .col-4 .phone i,
+#footer .container .row .col-4 .email i {
   margin-right: 10px;
 }
 #footer .container .row .tags {
   width: 40%;
+  text-align: center;
+  margin: 0 auto;
 }
 #footer .container .row .tags a {
   margin-right: 10px;
@@ -250,6 +256,8 @@ img {
 }
 #footer .container .row .social {
   width: 30%;
+  text-align: center;
+  margin: 0 auto;
 }
 #footer .container .row .social a {
   margin-right: 10px;
@@ -264,7 +272,8 @@ img {
   text-align: center;
 }
 #footer .copyrights .text-center {
-  font-size: 18px;
+  font-size: 24px;
+  color: white;
 }
 #footer .copyrights .text-center a {
   color: #3498DB;

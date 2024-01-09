@@ -220,105 +220,119 @@ img {
   left: 0;
   padding: 10px;
   box-sizing: border-box;
+  color: white;
 }
 
 
-  #footer {
-    background-color: $azulOscuro; 
-    color: white;
-    padding: 30px 0;
-  
-    .container {
+#footer {
+  background-color: $azulOscuro; 
+  color: white;
+  padding: 30px 0;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .row {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-  
-      .row {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
-  
-        .col-3 {
-          width: 30%;
-          margin-bottom: 20px;
-  
-          h2 {
-            font-size: 20px;
-            margin-bottom: 15px;
-          }
-  
-          .text-secondary {
-            color: #BDC3C7; 
-          }
-  
-          p {
-            margin: 10px 0;
-          }
-          address,
-          .phone,
-          .email {
-            margin-bottom: 10px;
-            i {
-              margin-right: 10px;
-            }
-          }
+      margin-bottom: 30px;
+
+      .col-4 {
+        width: 30%;
+        margin-bottom: 20px;
+        text-align: center; 
+        
+
+        .footer-title {
+          color: white;
+          border-bottom: 5px solid $azulClaro; 
+          padding-bottom: 5px; 
         }
-  
-        .tags {
-          width: 40%;
-  
-          a {
-            margin-right: 10px;
-            margin-bottom: 10px;
-            background-color: $azulOscuro; 
-            color: white;
-            &:hover {
-              background-color: $azulClaro; 
-            }
-          }
+
+        
+
+        .text-secondary {
+          color: #BDC3C7; 
         }
-  
-        .social {
-          width: 30%;
-  
-          a {
+
+        p {
+          margin: 10px 0;
+          color: white;
+        }
+
+        address,
+        .phone,
+        .email {
+          margin-bottom: 10px;
+          i {
             margin-right: 10px;
-            margin-bottom: 10px;
-            background-color: $azulClaro; 
-            color: white;
-            i {
-              margin-right: 5px;
-            }
           }
         }
       }
-    }
-  
-    .copyrights {
-      text-align: center;
-      .text-center {
-        font-size: 18px;
+
+      .tags {
+        width: 40%;
+        text-align: center; 
+        margin: 0 auto; 
+
         a {
-          color: $azulClaro; 
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background-color: $azulOscuro; 
+          color: white;
           &:hover {
-            text-decoration: underline;
+            background-color: $azulClaro; 
+          }
+        }
+      }
+
+      .social {
+        width: 30%;
+        text-align: center; 
+        margin: 0 auto; 
+
+        a {
+          margin-right: 10px;
+          margin-bottom: 10px;
+          background-color: $azulClaro; 
+          color: white;
+          i {
+            margin-right: 5px;
           }
         }
       }
     }
-  
-    #simracer-logo {
-      width: 80px; 
-      margin-top: 20px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
   }
- 
- 
+
+  .copyrights {
+    text-align: center;
+
+    .text-center {
+      font-size: 24px; 
+      color: white; 
+
+      a {
+        color: $azulClaro; 
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #simracer-logo {
+    width: 80px; 
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
   
   .article {
     padding: 20px;

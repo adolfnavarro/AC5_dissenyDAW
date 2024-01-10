@@ -1,10 +1,17 @@
+@charset "UTF-8";
+ç * {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
+  background-color: #f0f0f0;
 }
 
 header {
@@ -12,20 +19,23 @@ header {
   background-size: cover;
   background-position: center;
   padding: 2%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 25vh;
+  height: 250px;
 }
 header div {
-  height: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 header div img {
   height: 70%;
 }
-header div h1, header div h2 {
-  height: 15%;
-  box-sizing: border-box;
+header div h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  line-height: 30px;
+  word-wrap: break-word;
 }
 header .nav-brand {
   font-family: "DM Sans", sans-serif;
@@ -38,37 +48,42 @@ header h1, header h2 {
   color: white;
   text-decoration: none;
 }
-header h2 {
-  font-size: 16px;
-}
 
-nav {
-  height: 7vh;
+nav, .top_bar {
+  height: 60px;
   background-color: #212f5c;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-left: 3%;
 }
-nav div {
+nav ul, .top_bar ul {
+  list-style: none;
+}
+nav div, .top_bar div {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 2vw;
 }
-nav div a {
+nav div a, .top_bar div a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: large;
 }
-nav div a:hover {
+nav div a:hover, .top_bar div a:hover {
   color: rgb(201, 201, 201);
 }
 
 #site-main {
   display: flex;
-  flex-wrap: wrap;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .blue-container {
@@ -79,14 +94,33 @@ nav div a:hover {
   box-sizing: border-box;
 }
 
+.slide_And_newsAside {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.container, .swiper-wrapper, .swiper-container, .swiper-slide {
+  height: 100%;
+}
+.container a, .swiper-wrapper a, .swiper-container a, .swiper-slide a {
+  height: 100%;
+}
+
+.slider {
+  width: 60%;
+  background-color: white;
+  padding: 10px;
+}
 .slider .swiper-slide {
   position: relative;
   overflow: hidden;
 }
 .slider .swiper-slide img {
-  width: 140vh;
-  height: 65vh;
-  float: left;
+  height: 100%;
 }
 .slider .swiper-slide .overlay-content h1, .slider .swiper-slide p {
   color: white;
@@ -97,32 +131,39 @@ nav div a:hover {
 }
 
 .news-aside {
-  flex: 0 0 30%;
   background-color: #f0f0f0;
-  padding: 20px;
-}
-.news-aside h2 {
-  font-size: 18px;
-  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+  justify-content: space-between;
 }
 .news-aside ul {
-  margin-top: 20px;
-}
-.news-aside li {
-  margin-bottom: 20px;
-}
-
-ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
 }
-
-a {
+.news-aside ul li {
+  flex-direction: row;
+  background-color: white;
+  padding: 1%;
+}
+.news-aside ul li a {
+  width: 100%;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #333;
+}
+.news-aside ul li a img {
+  width: 40%;
+  height: 100%;
+}
+.news-aside li {
+  height: 100%;
 }
 
 img {
@@ -136,23 +177,25 @@ img {
 
 .news-aside nav {
   background-color: white;
-  overflow: hidden;
-  border-right: 1px solid black;
+  border-right: 1px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .news-aside nav a {
-  float: left;
-  display: block;
-  color: black;
+  color: rgba(0, 0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
   font-weight: bold;
-  width: 33.33%;
-  border-left: 1px solid black;
+  border-left: 1px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .news-aside nav a:first-child {
@@ -338,7 +381,7 @@ img {
   margin-right: auto;
 }
 .article .text {
-  color: black;
+  color: rgba(0, 0, 0, 0);
   text-align: center;
 }
 .article h2,

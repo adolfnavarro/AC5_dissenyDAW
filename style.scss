@@ -4,37 +4,52 @@ $azulClaro: #3498DB;
 $azul : #1c1e70;
 $negro : #0000;
 $blanco : #ffff;
+$gris:#f0f0f0;ç
+
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
+  background-color:$gris;
 }
   header {
     background-image: url('Fotos Simracing/road.jpg');
     background-size:cover;
     background-position:center;
     padding: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 25vh;
-
+    height: 250px;
+    
     div {
-      height: 80%;
-      img 
-      {
-        height:70%;
-      }
-      h1,h2 
-      {
-        height:15%;
-        box-sizing: border-box; 
-
-      }
-    }
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            img 
+            {
+              height: 70%;
+              
+            }
+            h1,h2 
+            {
+              
+            }
+            h2 
+            {
+              font-family: 'Work Sans', sans-serif;
+              font-size: 16px;
+              -webkit-font-smoothing: antialiased;
+              font-weight: 400;
+              line-height: 30px;
+              word-wrap: break-word;
+            }
+        }
+    
 
     .nav-brand {
       font-family: 'DM Sans', sans-serif;
@@ -49,19 +64,21 @@ body {
       text-decoration: none; 
     }
 
-    h2 {
-      font-size: 16px; 
-    }
   }
 
 
-nav {
-  height:7vh;
+nav,.top_bar {
+  height:60px;
   background-color: $azulOscuro;
   display: flex;
   flex-direction:row;
   align-items: center;
   padding-left: 3%;
+  ul 
+  {
+    list-style: none;
+  }
+ 
   div {
     display: flex;
     flex-direction: row;
@@ -82,7 +99,12 @@ nav {
 
 #site-main {
   display: flex;
-  flex-wrap: wrap;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .blue-container {
@@ -94,15 +116,36 @@ nav {
 
 }
 
+.slide_And_newsAside
+{
+  display:flex;
+  flex-direction: row;
+  height:50vh;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.container,.swiper-wrapper,.swiper-container,.swiper-slide
+{
+  height: 100%;
+  a {
+    height: 100%;
+  }
+}
+
+
 .slider {
+  width: 60%;
+  background-color: $blanco;
+  padding: 10px;
   .swiper-slide {
     position: relative;
     overflow: hidden;
 
     img {
-      width: 140vh;
-      height: 65vh;
-      float: left;
+      height:100%;
+
     }
     
     .overlay-content h1, p{
@@ -112,41 +155,54 @@ nav {
 }
 
 .swiper-slide img {
+  
   width: 100%; 
 }
 
 .news-aside {
-  flex: 0 0 30%;
   background-color: #f0f0f0;
-  padding: 20px;
-
-
-  h2 {
-    font-size: 18px; 
-    color: $negro;
-  }
-
-  ul {
-    margin-top: 20px;
-  }
-
-  li {
-    margin-bottom: 20px; 
-  }
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-a {
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
+  flex-direction: column;
+  height:100%;
+  width:40%;
+  justify-content:space-between;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height:90%;
+        li 
+        { 
+          flex-direction: row;
+          background-color: $blanco;
+          padding:  1%;
+          a {
+            width:100%;
+            // height: 100%;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            img
+            {
+              width:40%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    li {
+      height:100%;
+      // margin-bottom: 20px; 
+    }
 }
+
+
+
+
 
 img {
   max-width: 100%;
@@ -158,24 +214,27 @@ img {
 }
 .news-aside nav {
   background-color: $blanco;
-  overflow: hidden;
+  // overflow: hidden;
   border-right: 1px solid $negro; 
   box-sizing: border-box; 
+  height:10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
 }
 
 .news-aside nav a {
-  float: left;
-  display: block;
   color: $negro;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
   font-weight: bold; 
-  width: 33.33%; 
   border-left: 1px solid $negro;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  display:flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .news-aside nav a:first-child {

@@ -1,7 +1,7 @@
 
 $azulOscuro:#212f5c;
 $azulClaro: #3498DB;
-$azul : #1c1e70;
+$azul : #1151d3;
 $negro : #0000;
 $blanco : #ffff;
 $gris:#f0f0f0;ç
@@ -9,6 +9,7 @@ $gris:#f0f0f0;ç
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +20,12 @@ body {
   flex-direction: column;
   background-color:$gris;
 }
-  header {
+
+img {
+  max-width: 100%;
+}
+
+header {
     background-image: url('Fotos Simracing/road.jpg');
     background-size:cover;
     background-position:center;
@@ -101,21 +107,67 @@ nav,.top_bar {
   display: flex;
   margin-left: 200px;
   margin-right: 200px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
 }
 
-.blue-container {
-  flex: 0 0 100%;
-  background-color: $azulClaro;
-  padding: 20px;
-  color: $blanco;
-  box-sizing: border-box; 
+.blue-container2 {
+  height: 50px;
+  background-color: $blanco;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+  h2 
+  {
+    // width:20%;
+    background-color: $azul;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p 
+  {
+    color: $azul;
+    font-size: medium;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .barra_decorativa 
+  { 
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    .bup 
+    {
+      height: 90%;
+    }
+    .bdown 
+    { 
+      
+      height: 10%;
+      background-color:$azul;
+    }
+    
+  }
 }
 
+.blue-container
+{
+  @extend.blue-container2;
+  gap:2%;
+}
 .slide_And_newsAside
 {
   display:flex;
@@ -142,22 +194,29 @@ nav,.top_bar {
   .swiper-slide {
     position: relative;
     overflow: hidden;
+    width: 100%; 
 
     img {
       height:100%;
-
-    }
-    
-    .overlay-content h1, p{
-      color:$blanco;
     }
   }
 }
 
-.swiper-slide img {
-  
-  width: 100%; 
-}
+.overlay-content 
+    {
+      h1{
+        color:$blanco;
+        font-size: 32px;
+        font-weight: 700;
+      }
+      p,a{
+        color:$blanco;
+        font-size:12px;
+        font-weight: 500;
+      }
+    }
+
+
 
 .news-aside {
   background-color: #f0f0f0;
@@ -176,6 +235,7 @@ nav,.top_bar {
         height:90%;
         li 
         { 
+          height:100%;
           flex-direction: row;
           background-color: $blanco;
           padding:  1%;
@@ -188,90 +248,79 @@ nav,.top_bar {
             color: #333;
             img
             {
+              max-width: 43%;
+              margin-right: 10px;
               width:40%;
               height: 100%;
             }
           }
         }
-      }
-    li {
-      height:100%;
-      // margin-bottom: 20px; 
-    }
+        }
+        
+        nav {
+          background-color: $blanco;
+          // overflow: hidden;
+          border-right: 1px solid $negro; 
+          box-sizing: border-box; 
+          height:10%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width:100%;
+          a 
+          {
+            width:100%;
+            height: 100%;
+            color: $negro;
+            padding: 2%;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold; 
+            border-left: 1px solid $negro;
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+      
+          }
+          a:hover {
+            background-color: #ddd;
+          }
+        }
+        img.nav-icon {
+          max-width: 100%;
+      
+        }
+        
+        .news-details {
+          p {
+            margin: 0;
+            font-size: 16px; 
+          }
+          .date {
+            color: #999;
+          }
+        }
+
 }
 
 
 
 
 
-img {
-  max-width: 100%;
-}
-.news-aside img{
-  max-width: 43%;
-  margin-right: 10px;
-
-}
-.news-aside nav {
-  background-color: $blanco;
-  // overflow: hidden;
-  border-right: 1px solid $negro; 
-  box-sizing: border-box; 
-  height:10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-}
-
-.news-aside nav a {
-  color: $negro;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-weight: bold; 
-  border-left: 1px solid $negro;
-  box-sizing: border-box;
-  display:flex;
-  text-align: center;
-  justify-content: center;
-}
-
-.news-aside nav a:first-child {
-  border-left: none; 
-}
-
-.news-aside nav a:hover {
-  background-color: #ddd;
-}
-
-.news-aside img.nav-icon {
-  max-width: 25px; 
-  margin-right: 10px;
-}
-
-
-.news-details {
-  p {
-    margin: 0;
-    font-size: 20px; 
-  }
-
-  .date {
-    color: #999;
-  }
-}
 
 .images-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  background-color: $blanco;
+  padding: 1%;
+
 }
 
 .small-image {
   width: 23%;
   position: relative;
-  margin-bottom: 20px;
+ 
 }
 
 .overlay-content {
@@ -281,6 +330,12 @@ img {
   padding: 10px;
   box-sizing: border-box;
   color: $blanco;
+  p:first-child
+  {
+    font-size:large;
+    font-weight: 700;
+  }
+
 }
 
 
@@ -394,15 +449,17 @@ img {
 
 
   
-  .article {
+.article {
+  @extend #site-main;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 145px solid $azul; 
-    border-left: 145px solid $azul; 
+    // border-right: 145px solid $azul; 
+    // border-left: 145px solid $azul; 
     margin: 0 auto; 
     max-width: 1200px; 
+    background-color: $blanco;
 
     img {
         max-width: 80%;
@@ -449,7 +506,7 @@ img {
         margin-right: auto;
     }
 
-    .text {
+    .text,p {
         color: $negro;
         text-align: center;
     }

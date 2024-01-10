@@ -14,6 +14,10 @@ body {
   background-color: #f0f0f0;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   background-image: url("Fotos Simracing/road.jpg");
   background-size: cover;
@@ -76,22 +80,58 @@ nav div a:hover, .top_bar div a:hover {
   color: rgb(201, 201, 201);
 }
 
-#site-main {
+#site-main, .article {
   display: flex;
   margin-left: 200px;
   margin-right: 200px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
+}
+
+.blue-container2, .blue-container {
+  height: 50px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.blue-container2 h2, .blue-container h2 {
+  background-color: #1151d3;
+  height: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blue-container2 p, .blue-container p {
+  color: #1151d3;
+  font-size: medium;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blue-container2 .barra_decorativa, .blue-container .barra_decorativa {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.blue-container2 .barra_decorativa .bup, .blue-container .barra_decorativa .bup {
+  height: 90%;
+}
+.blue-container2 .barra_decorativa .bdown, .blue-container .barra_decorativa .bdown {
+  height: 10%;
+  background-color: #1151d3;
 }
 
 .blue-container {
-  flex: 0 0 100%;
-  background-color: #3498DB;
-  padding: 20px;
-  color: white;
-  box-sizing: border-box;
+  gap: 2%;
 }
 
 .slide_And_newsAside {
@@ -118,16 +158,21 @@ nav div a:hover, .top_bar div a:hover {
 .slider .swiper-slide {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .slider .swiper-slide img {
   height: 100%;
 }
-.slider .swiper-slide .overlay-content h1, .slider .swiper-slide p {
-  color: white;
-}
 
-.swiper-slide img {
-  width: 100%;
+.overlay-content h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+.overlay-content p, .overlay-content a {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .news-aside {
@@ -147,6 +192,7 @@ nav div a:hover, .top_bar div a:hover {
   height: 90%;
 }
 .news-aside ul li {
+  height: 100%;
   flex-direction: row;
   background-color: white;
   padding: 1%;
@@ -159,22 +205,11 @@ nav div a:hover, .top_bar div a:hover {
   color: #333;
 }
 .news-aside ul li a img {
+  max-width: 43%;
+  margin-right: 10px;
   width: 40%;
   height: 100%;
 }
-.news-aside li {
-  height: 100%;
-}
-
-img {
-  max-width: 100%;
-}
-
-.news-aside img {
-  max-width: 43%;
-  margin-right: 10px;
-}
-
 .news-aside nav {
   background-color: white;
   border-right: 1px solid rgba(0, 0, 0, 0);
@@ -182,53 +217,47 @@ img {
   height: 10%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
 }
-
 .news-aside nav a {
+  width: 100%;
+  height: 100%;
   color: rgba(0, 0, 0, 0);
+  padding: 2%;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-weight: bold;
   border-left: 1px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   display: flex;
-  text-align: center;
+  flex-direction: row;
   justify-content: center;
 }
-
-.news-aside nav a:first-child {
-  border-left: none;
-}
-
 .news-aside nav a:hover {
   background-color: #ddd;
 }
-
 .news-aside img.nav-icon {
-  max-width: 25px;
-  margin-right: 10px;
+  max-width: 100%;
 }
-
-.news-details p {
+.news-aside .news-details p {
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
-.news-details .date {
+.news-aside .news-details .date {
   color: #999;
 }
 
 .images-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  background-color: white;
+  padding: 1%;
 }
 
 .small-image {
   width: 23%;
   position: relative;
-  margin-bottom: 20px;
 }
 
 .overlay-content {
@@ -238,6 +267,10 @@ img {
   padding: 10px;
   box-sizing: border-box;
   color: white;
+}
+.overlay-content p:first-child {
+  font-size: large;
+  font-weight: 700;
 }
 
 #footer {
@@ -337,10 +370,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 145px solid #1c1e70;
-  border-left: 145px solid #1c1e70;
   margin: 0 auto;
   max-width: 1200px;
+  background-color: white;
 }
 .article img {
   max-width: 80%;
@@ -380,7 +412,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-.article .text {
+.article .text, .article p {
   color: rgba(0, 0, 0, 0);
   text-align: center;
 }

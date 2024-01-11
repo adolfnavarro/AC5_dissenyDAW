@@ -1,5 +1,4 @@
-@charset "UTF-8";
-ç * {
+* {
   box-sizing: border-box;
 }
 
@@ -212,7 +211,7 @@ nav div a:hover, .top_bar div a:hover {
 }
 .news-aside nav {
   background-color: white;
-  border-right: 1px solid rgba(0, 0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
   height: 10%;
   display: flex;
@@ -223,12 +222,12 @@ nav div a:hover, .top_bar div a:hover {
 .news-aside nav a {
   width: 100%;
   height: 100%;
-  color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
   padding: 2%;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-left: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -404,17 +403,14 @@ nav div a:hover, .top_bar div a:hover {
 .article h3 {
   font-size: 35px;
 }
-.article p {
+.article .text, .article p {
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 17px;
   max-width: 1500px;
   padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
-}
-.article .text, .article p {
-  color: rgba(0, 0, 0, 0);
-  text-align: center;
 }
 .article h2,
 .article h3 {

@@ -498,8 +498,6 @@ nav,.top_bar {
     }
     
 
-
-
     .text,p {
       color: $negro;
       text-align: center;
@@ -519,4 +517,62 @@ nav,.top_bar {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.about{
+  @extend #site-main;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; 
+    max-width: 1200px; 
+    background-color: $blanco;
+
+    img{
+      max-width: 80%;
+      margin-bottom: 15px;
+    }
+    h1{
+      color: $azulOscuro;
+      font-size: 50px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    h2,
+    h3 {
+        color: $azulOscuro;
+        text-align: center;
+        max-width: 1800px;
+        padding: 0 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text,p {
+      color: $negro;
+      text-align: center;
+      font-size: 17px;
+      max-width: 1500px;
+      padding: 0 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .iconos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh; 
+    
+      img {
+        max-width: 20%;
+        height: auto;
+        margin-bottom: 10px; 
+      }
+    }
+    
+
+
 }

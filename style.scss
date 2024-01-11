@@ -558,21 +558,38 @@ nav,.top_bar {
       margin-left: auto;
       margin-right: auto;
     }
+   
+    p {
+      color: black;
+      text-align: center;
+      font-size: 17px;
+      max-width: 1500px;
+      padding: 0 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .iconos {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       text-align: center;
-      height: 100vh; 
-    
-      img {
-        max-width: 20%;
-        height: auto;
-        margin-bottom: 10px; 
+      height: 40vh;
+
+      .icono {
+          margin: 0 10px; 
+          text-align: center;
+
+          img {
+              max-width: 50%;
+              height: auto;
+          }
+
+          h3 {
+              margin-top: 10px; 
+          }
       }
-    }
-    
-
-
+  }
 }
+    
